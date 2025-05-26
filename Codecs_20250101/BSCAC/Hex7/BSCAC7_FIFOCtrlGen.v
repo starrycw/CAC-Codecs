@@ -38,7 +38,7 @@ module BSCAC7_FIFOCtrlGen(
 
     // XNORs
     wire [6 : 0] xnor_states;
-    assign xnor_states[0 : 6] = tsvs_state_current[0 : 6] ~^ stsvs_state_next[0 : 6];
+    assign xnor_states[6 : 0] = tsvs_state_current[6 : 0] ~^ stsvs_state_next[6 : 0];
 
     // If DTSV state remains unchanged
     wire [6 : 1] flag_free_case0;
